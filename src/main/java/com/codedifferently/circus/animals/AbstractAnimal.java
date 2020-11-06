@@ -4,9 +4,9 @@ import com.codedifferently.circus.animals.actions.AnimalTricks;
 import org.apache.log4j.Logger;
 
 public abstract class AbstractAnimal {
-    private final static Logger logger = Logger.getLogger(AbstractAnimal.class);
+    protected final static Logger logger = Logger.getLogger(AbstractAnimal.class);
 
-    private String name;
+    protected String name;
     private Integer energy;
     private AnimalTricks trickAction;
 
@@ -24,7 +24,7 @@ public abstract class AbstractAnimal {
     }
 
     public void doTrick(){
-        String msg  =String.format("You will need to teach %s a trick first", name);
+        String msg  = String.format("You will need to teach %s a trick first", name);
         logger.info(msg);
     }
 
